@@ -1,19 +1,20 @@
 <template>
     <div class="v-catalog">
-        <div v-for="(page,index) in PAGES" :key="index">
+        <!-- <div v-for="(page,index) in INLINEPOSTS" :key="index"> -->
             <vCatalogItem 
-                v-for="item in page.content" 
+                v-for="item in searchHandler" 
                 :key="item.id"
                 :item_data="item" 
                 />
 
-        </div>
+        <!-- </div> -->
     </div>
 </template>
 
 <script>
 import vCatalogItem from "./v-catalog-item";
 import {mapActions, mapGetters} from 'vuex';
+import store from '../vuex/store';
 
     export default {
         name:"v-catalog",
@@ -22,14 +23,23 @@ import {mapActions, mapGetters} from 'vuex';
         },
         data(){
             return{
-                // pages:[]
+                data:[]
             }
         },
         computed:{
             ...mapGetters([
                 'PAGES',
                 'INLINEPOSTS'
-            ])
+            ]),
+            inputValue: function () {
+                return store.state.search
+            },
+            searchHandler:function (){
+                return this.INLINEPOSTS.filter(element=>{
+                    return element.name.toLowerCase().includes(this.inputValue);
+                });
+            }
+            
         },
         methods:{
             ...mapActions([
@@ -38,6 +48,7 @@ import {mapActions, mapGetters} from 'vuex';
         },
         mounted(){
             this.GET_PAGES(1);
+            this.data = 123;
         }
     }
 </script>
@@ -45,7 +56,7 @@ import {mapActions, mapGetters} from 'vuex';
 <style lang="scss" scoped>
     .v-catalog {
         display:grid;
-        grid-template-columns: repeat(4, auto);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: $padding;
     }
 </style>

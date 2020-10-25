@@ -7,10 +7,14 @@ Vue.use(Vuex);
 let store = new Vuex.Store({
   state: {
     pages: [],
+    search: "",
   },
   mutations: {
     SET_PAGES_TO_STATE: (state, page) => {
       state.pages.push(page);
+    },
+    SEARCHFOR(state, text) {
+      state.search = text;
     },
   },
   actions: {
@@ -26,6 +30,9 @@ let store = new Vuex.Store({
           console.log(error);
           return error;
         });
+    },
+    SEARCH_NAME({ commit }, text) {
+      commit("SEARCHFOR", text);
     },
   },
   getters: {
