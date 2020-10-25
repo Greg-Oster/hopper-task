@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <h1>Hello Frontender</h1>
-    <v-main-wrapper/>
     <vMainWrapper/>
   </div>
 </template>

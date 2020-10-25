@@ -1,19 +1,25 @@
 <template>
-    <div class="v-main-wrapper">
-        <h1>{{title}}</h1>
+    <div class="v-main-wrapper">    
+        <vNavigation/>
+        <vCatalog/>
     </div>
 </template>
 
 <script>
+import vNavigation from "./v-navigation";
+import vCatalog from "./v-catalog";
+
     export default{
         name:'v-main-wrapper', // Обязательное имя компонента
         components:{
             // Дочерние компоненты
+            vNavigation,
+            vCatalog,
         },
         props:{}, // Пропсы - посылаются сверху
         data(){
             return{
-                title:"Hi there" // Персональное свойство
+                title:"Hi there 1" // Персональное свойство
             }
         }, // Внутренние данные компонента
         computed:{}, // Вычисляемые свойства компонента
@@ -29,8 +35,8 @@
 <style scoped>
     .v-main-wrapper {
         display:flex;
-        justify-content: center;
-        max-width:1000px;
+        flex-direction: column;
+        max-width:800px;
         margin:0 auto;
     }
 </style>

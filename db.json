@@ -1,9 +1,94 @@
-{
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
-  }
+
+  {
+    "pages":[
+
+
+      {
+      "id":1,
+      "page": 1,
+      "lastPage": 3,
+      "content": [
+        {
+          "id": "1",
+          "type": "movie",
+          "category": "трейлер",
+          "pageUrl": "https://site.ru/videos/1a1dc91c9",
+          "name": "Начало (2010) - Inception"
+        },
+        {
+          "id": "2",
+          "type": "music",
+          "genre": "rock",
+          "pageUrl": "https://site.ru/videos/07325c692",
+          "name": "Limp Bizkit ¬ Behind Blue Eyes"
+        },
+        {
+          "id": "3",
+          "type": "music",
+          "genre": "phonk",
+          "pageUrl": "https://site.ru/videos/07325c692",
+          "name": "Turbobust"
+          }
+      ]
+    },
+    
+    {
+    "id":2,
+    "page": 2,
+    "lastPage": 3,
+    "content": [
+      {
+        "id": "4",
+        "type": "movie",
+        "category": "трейлер",
+        "pageUrl": "https://site.ru/videos/1a1dc91c9",
+        "name": "Начало (2010) - Inception"
+      },
+      {
+        "id": "5",
+        "type": "music",
+        "genre": "rock",
+        "pageUrl": "https://site.ru/videos/07325c692",
+        "name": "Limp Bizkit ¬ Behind Blue Eyes"
+      },
+      {
+        "id": "6",
+        "type": "music",
+        "genre": "phonk",
+        "pageUrl": "https://site.ru/videos/07325c692",
+        "name": "Turbobust"
+        }
+      ]
+    },
+
+    {
+      "id":3,
+      "page": 3,
+      "lastPage": 3,
+      "content": [
+        {
+          "id": "7",
+          "type": "movie",
+          "category": "трейлер",
+          "pageUrl": "https://site.ru/videos/1a1dc91c9",
+          "name": "qweqweqwe"
+        },
+        {
+          "id": "8",
+          "type": "music",
+          "genre": "rock",
+          "pageUrl": "https://site.ru/videos/07325c692",
+          "name": "Limp Bizkit ¬ Behind Blue Eyes"
+        },
+        {
+          "id": "9",
+          "type": "music",
+          "genre": "phonk",
+          "pageUrl": "https://site.ru/videos/07325c692",
+          "name": "Turbobust"
+          }
+        ]
+      }
+  ]
+}
+    
