@@ -12,7 +12,6 @@
 </template>
 
 <script>
-    // TODO: при вводе в инпут передать данные в каталог
     import {mapActions} from 'vuex';
 
     export default {
@@ -20,12 +19,6 @@
         data(){
             return{
                 text:"",
-                data:[]
-            }
-        },
-        computed:{
-            searchHandler(){
-                return "123";
             }
         },
         methods:{
@@ -40,5 +33,15 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .v-search-name {
+        border-radius:0.25rem;
+        input{
+            border-radius: 0.25rem;
+            padding: 0.8rem 1rem;
+            background: rgba(230, 230, 230, 0.5);
+            margin: 0;
+            border:none;
+        }
+        
+    }
 </style>

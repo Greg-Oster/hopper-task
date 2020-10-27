@@ -1,11 +1,11 @@
 <template>
     <div class="v-catalog-item">
-        <p class="v-catalog-item__name">{{item_data.name}}</p>
+        <a v-bind:href="item_data.pageUrl" class="v-catalog-item__name">{{item_data.name}}</a>
         <div v-if="item_data.category" class="v-catalog-item__category">
-            {{item_data.category}}
+            Категория: {{item_data.category}}
         </div>
         <div v-else-if="item_data.genre" class="v-catalog-item__category">
-            {{item_data.genre}}
+            Жанр: {{item_data.genre}}
         </div>
         <div v-else class="v-catalog-item__category--no-category">
             Категория отсутствует
@@ -33,5 +33,6 @@
     .v-catalog-item {
         padding:$padding*2;
         background:$item-bg;
+        border-radius: 0.25rem;
     }
 </style>

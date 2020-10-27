@@ -1,13 +1,10 @@
 <template>
     <div class="v-catalog">
-        <!-- <div v-for="(page,index) in INLINEPOSTS" :key="index"> -->
             <vCatalogItem 
                 v-for="item in searchHandler" 
                 :key="item.id"
                 :item_data="item" 
                 />
-
-        <!-- </div> -->
     </div>
 </template>
 
@@ -47,8 +44,7 @@ import store from '../vuex/store';
             ])
         },
         mounted(){
-            this.GET_PAGES(1);
-            this.data = 123;
+            this.GET_PAGES({url:"http://localhost:3000/pages/",index:"1"});
         }
     }
 </script>
@@ -56,7 +52,7 @@ import store from '../vuex/store';
 <style lang="scss" scoped>
     .v-catalog {
         display:grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         grid-gap: $padding;
     }
 </style>
